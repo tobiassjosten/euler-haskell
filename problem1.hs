@@ -5,5 +5,4 @@ get 3, 5, 6 and 9. The sum of these multiples is 23.
 Find the sum of all the multiples of 3 or 5 below 1000.
 -}
 
-import Data.List
-problem1 = sum $ nub $ [3,6..999] ++ [5,10..999]
+problem1 = sum [n | n <- [1..999], n `mod` 3 == 0 || n `mod` 5 == 0]
